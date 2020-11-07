@@ -9,15 +9,11 @@ public class Move : MonoBehaviour
     AudioListener MainCamera;
 
     public float speedCoef = 1f;
-
     public float maxHeight = 2f;
     public float minHeight = 1f;
 
-
-
     public float height = 0;
 
-    public float DebugActualSpeed = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -47,8 +43,8 @@ public class Move : MonoBehaviour
 
     float coef = Mathf.InverseLerp(maxHeight, minHeight, height);
 
-
-    transform.Translate(MainCamera.transform.forward * coef * speedCoef);
+    transform.eulerAngles =  new Vector3(transform.rotation.eulerAngles.x, MainCamera.transform.localRotation.eulerAngles.y, transform.rotation.eulerAngles.z);
+    transform.Translate(transform.forward * coef * speedCoef);
 
     }
 }

@@ -2653,9 +2653,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a51e6b6cf011dda41a725a1c6bcbd1f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedCoef: 0.1
+  speedCoef: 0.3
   maxHeight: 1.5
-  minHeight: 0.8
+  minHeight: 0.7
   height: 0
   DebugActualSpeed: 0
 --- !u!1 &1374761230
