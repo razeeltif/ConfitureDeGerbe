@@ -4,5 +4,12 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
-  m_configObjects: {}
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/UlysseScene.unity
+    guid: 06fd8490ce128a54aaf3999ae5b6f95e
+  m_configObjects:
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: beacf788ba09e6e46b2d72ffe16fe180,
+      type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 5b4ec30dadecfc547a84eb3d3191d15e,
+      type: 2}
