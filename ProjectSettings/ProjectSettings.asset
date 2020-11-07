@@ -154,7 +154,7 @@ PlayerSettings:
     oculus:
       sharedDepthBuffer: 1
       dashSupport: 1
-      lowOverheadMode: 0
+      lowOverheadMode: 1
       protectedContext: 0
       v2Signing: 1
     enable360StereoCapture: 0
@@ -167,7 +167,8 @@ PlayerSettings:
   resolutionScalingMode: 0
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
-  applicationIdentifier: {}
+  applicationIdentifier:
+    Android: com.DefaultCompany.ConfitureDeGerbe
   buildNumber: {}
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 19
@@ -420,12 +421,10 @@ PlayerSettings:
   m_BuildTargetVRSettings:
   - m_BuildTarget: Standalone
     m_Enabled: 0
-    m_Devices:
-    - Oculus
+    m_Devices: []
   - m_BuildTarget: Android
     m_Enabled: 0
-    m_Devices:
-    - Oculus
+    m_Devices: []
   openGLRequireES31: 0
   openGLRequireES31AEP: 0
   openGLRequireES32: 0
