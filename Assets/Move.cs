@@ -23,7 +23,7 @@ public class Move : MonoBehaviour
     
     public float speedToStrifeCoef = 3;
 
-    private float actualSpeed = 0;
+    public float actualSpeed = 0;
 
     // Start is called before the first frame update
     void Start()
