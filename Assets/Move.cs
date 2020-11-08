@@ -8,12 +8,22 @@ public class Move : MonoBehaviour
     // get center camera (audio listener because reason)
     AudioListener MainCamera;
 
-    public float speedCoef = 1f;
+    // speed
+    public float SpeedForward = 1f;
     public float maxHeight = 2f;
     public float minHeight = 1f;
 
     public float height = 0;
 
+    // strife
+    public float SpeedStrife = 1f;
+
+    public float minStrifeAngle = 10f;
+    public float maxStrifeAngle = 90f;
+    
+    public float speedToStrifeCoef = 3;
+
+    private float actualSpeed = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -28,23 +38,48 @@ public class Move : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Speed(SpeedForward);
+
+        Strife(SpeedStrife, actualSpeed);
+    }
+
+
+    private void Speed(float speedCoef){
+
+        height = MainCamera.transform.localPosition.y;
+
+        if(height > maxHeight) height = maxHeight;
+        if(height < minHeight) height = minHeight;
+
+        float coef = Mathf.InverseLerp(maxHeight, minHeight, height);
+
+
+        transform.Translate(transform.forward * coef * speedCoef);
+
+        actualSpeed = coef;
+    }
+
+
+    private void Strife(float speedStrife, float actuSpeed){
+
+
+        actuSpeed *= speedToStrifeCoef;
+        if(actualSpeed > 1) actualSpeed = 1;
+
+        float HeadLeanAngle = MainCamera.transform.rotation.eulerAngles.z;
+
+        // strife left
+        if(HeadLeanAngle < 180){
         
-      /*  RaycastHit hit;
-        Physics.Raycast(MainCamera.transform.position, Vector3.down, out hit, 100);
+            float coef = Mathf.InverseLerp(minStrifeAngle, maxStrifeAngle, HeadLeanAngle);
+            transform.Translate(-transform.right * coef * speedStrife * actuSpeed);
 
-        if(hit.distance > 0){
-            height = hit.distance;
-        }*/
-
-    height = MainCamera.transform.localPosition.y;
-
-    if(height > maxHeight) height = maxHeight;
-    if(height < minHeight) height = minHeight;
-
-    float coef = Mathf.InverseLerp(maxHeight, minHeight, height);
-
-    transform.eulerAngles =  new Vector3(transform.rotation.eulerAngles.x, MainCamera.transform.localRotation.eulerAngles.y, transform.rotation.eulerAngles.z);
-    transform.Translate(transform.forward * coef * speedCoef);
+        // strife right
+        }else{
+            HeadLeanAngle = 360 - HeadLeanAngle;
+            float coef = Mathf.InverseLerp(minStrifeAngle, maxStrifeAngle, HeadLeanAngle);
+            transform.Translate(transform.right * coef * speedStrife * actuSpeed);
+        }
 
     }
 }
