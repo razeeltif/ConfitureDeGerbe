@@ -8258,6 +8258,7 @@ MonoBehaviour:
   maxStrifeAngle: 45
   speedToStrifeCoef: 1.5
   actualSpeed: 0
+  CanMove: 0
 --- !u!1001 &1370576949
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9504,7 +9505,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1545887776}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22245af1fe77edb448c3ade6d43db064, type: 3}
+  m_Script: {fileID: 11500000, guid: edc36223d82c72e468fdcac665398232, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   collidingObject: {fileID: 0}

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OculusGrab : MonoBehaviour
+public class OculusGrabLeft : MonoBehaviour
 {
     public GameObject collidingObject;
     public GameObject objectInHand;
@@ -10,23 +10,21 @@ public class OculusGrab : MonoBehaviour
     public GameObject skateObject;
     public GameObject trackingSpace;
 
-
     private void Update()
     {
-        Debug.LogError(OVRInput.Get(OVRInput.Axis1D.SecondaryIndexTrigger));
-        if (OVRInput.Get(OVRInput.Axis1D.SecondaryIndexTrigger) > 0.2 && collidingObject)
-        {
+        if (OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger) > 0.2f && collidingObject)
 
+        {
             GrabObject();
 
-            if(trackingSpace.transform.TransformVector(OVRInput.GetLocalControllerVelocity(OVRInput.Controller.RHand)).y > 1.1)
+            if(trackingSpace.transform.TransformVector(OVRInput.GetLocalControllerVelocity(OVRInput.Controller.LHand)).y > 1.1)
             {
                 GetComponentInParent<Move>().CanMove = true;
             }
 
         }
 
-        if (OVRInput.Get(OVRInput.Axis1D.SecondaryIndexTrigger) < 0.2f && objectInHand)
+        if (OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger) < 0.2f && objectInHand)
 
         {
 
