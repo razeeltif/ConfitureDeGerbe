@@ -25,6 +25,8 @@ public class Move : MonoBehaviour
 
     public float actualSpeed = 0;
 
+    public bool CanMove = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,9 +40,13 @@ public class Move : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Speed(SpeedForward);
 
-        Strife(SpeedStrife, actualSpeed);
+        if(CanMove)
+        {
+            Speed(SpeedForward);
+
+            Strife(SpeedStrife, actualSpeed);
+        }
     }
 
 

@@ -27,7 +27,7 @@ public class OculusGrab : MonoBehaviour
 
             if(trackingSpace.transform.TransformVector(OVRInput.GetLocalControllerVelocity(OVRInput.Controller.RHand)).y > 1.1)
             {
-                //Finish here
+                GetComponentInParent<Move>().CanMove = true;
             }
 
         }
