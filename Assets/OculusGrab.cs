@@ -7,6 +7,16 @@ public class OculusGrab : MonoBehaviour
     public GameObject collidingObject;
     public GameObject objectInHand;
     public GameObject HandlepositionInitial;
+    public GameObject skateObject;
+    GameObject parent;
+    Vector3 parentPrevious;
+    public GameObject trackingSpace;
+    float velocity;
+
+    private void Start()
+    {
+        parent = gameObject.transform.parent.gameObject;
+    }
 
     private void Update()
     {
@@ -14,6 +24,12 @@ public class OculusGrab : MonoBehaviour
 
         {
             GrabObject();
+
+            if(trackingSpace.transform.TransformVector(OVRInput.GetLocalControllerVelocity(OVRInput.Controller.RHand)).y > 1.1)
+            {
+                //Finish here
+            }
+
         }
 
         if (OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger) < 0.2f && objectInHand)
@@ -52,14 +68,14 @@ public class OculusGrab : MonoBehaviour
 
     public void ReleaseObject()
     {
+
+        objectInHand.transform.SetParent(skateObject.transform);
         objectInHand.transform.position = HandlepositionInitial.transform.position;
-
+        objectInHand.transform.rotation = HandlepositionInitial.transform.rotation;
         objectInHand.GetComponent<Rigidbody>().isKinematic = false;
-
-        objectInHand.transform.SetParent(null);
-
         objectInHand.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
 
         objectInHand = null;
     }
+
 }
