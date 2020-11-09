@@ -9,9 +9,13 @@ public class WatchHour : MonoBehaviour
     string Speedtext;
     int speedInKMH;
     float speedinKMHfloat;
+    int watchMode;
+    public bool tap, tapRegistered;
     // Start is called before the first frame update
     void Start()
     {
+        tap = false;
+        watchMode = 0;
         speedInKMH = 0;
         textObject = GetComponent<Text>();
     }
@@ -19,9 +23,23 @@ public class WatchHour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        speedinKMHfloat = gameObject.transform.parent.parent.parent.parent.parent.GetComponent<Move>().actualSpeed * 50;
-        speedInKMH = (int) speedinKMHfloat;
-        Speedtext = speedInKMH.ToString() + " Km/h";
-        textObject.text = Speedtext;
+        if(tap && !tapRegistered)
+        {
+            watchMode++;
+            Debug.LogError(watchMode);
+            tapRegistered = true;
+        }
+
+        /*switch (watchMode)
+        {
+            case 0:
+                speedinKMHfloat = gameObject.transform.parent.parent.parent.parent.parent.GetComponent<Move>().actualSpeed * 50;
+                speedInKMH = (int)speedinKMHfloat;
+                Speedtext = speedInKMH.ToString() + " Km/h";
+                textObject.text = Speedtext;
+                return;
+            case 1:
+                return;
+        }*/
     }
 }

@@ -9,11 +9,11 @@ public class OculusGrab : MonoBehaviour
     public GameObject HandlepositionInitial;
     public GameObject skateObject;
     public GameObject trackingSpace;
+    GameObject tappedObject;
 
 
     private void Update()
     {
-        Debug.LogError(OVRInput.Get(OVRInput.Axis1D.SecondaryIndexTrigger));
         if (OVRInput.Get(OVRInput.Axis1D.SecondaryIndexTrigger) > 0.2 && collidingObject)
         {
 
@@ -41,17 +41,31 @@ public class OculusGrab : MonoBehaviour
         {
             collidingObject = other.gameObject;
         }
+
+        else if (other.tag == "Tappable")
+        {
+            tappedObject = other.gameObject;
+            tappedObject.GetComponent<WatchHour>().tap = true;
+            
+        }
     }
 
     public void OnTriggerExit(Collider other)
     {
         collidingObject = null;
+
+        if (tappedObject != null)
+        {
+            tappedObject.GetComponent<WatchHour>().tapRegistered = false;
+            tappedObject.GetComponent<WatchHour>().tap = false;
+        }
+        tappedObject = null;
     }
 
     public void GrabObject()
     {
         objectInHand = collidingObject;
-
+        objectInHand.transform.position = gameObject.transform.parent.GetChild(2).transform.position;
         objectInHand.transform.SetParent(this.transform);
 
         objectInHand.GetComponent<Rigidbody>().isKinematic = true;
