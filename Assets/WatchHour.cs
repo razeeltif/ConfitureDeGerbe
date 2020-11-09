@@ -6,18 +6,19 @@ using UnityEngine.UI;
 public class WatchHour : MonoBehaviour
 {
     Text textObject;
-    string Speedtext;
+    string changeableText;
     int speedInKMH;
     float speedinKMHfloat;
     int watchMode;
     public bool tap, tapRegistered;
+    public GameObject player;
     // Start is called before the first frame update
     void Start()
     {
         tap = false;
         watchMode = 0;
         speedInKMH = 0;
-        textObject = GetComponent<Text>();
+        textObject = gameObject.transform.Find("Canvas").GetComponentInChildren<Text>();
     }
 
     // Update is called once per frame
@@ -26,20 +27,22 @@ public class WatchHour : MonoBehaviour
         if(tap && !tapRegistered)
         {
             watchMode++;
-            Debug.LogError(watchMode);
+            if (watchMode > 1) watchMode = 0; //A changer si on ajoute des nouveaux modes
             tapRegistered = true;
         }
 
-        /*switch (watchMode)
+        switch (watchMode)
         {
             case 0:
-                speedinKMHfloat = gameObject.transform.parent.parent.parent.parent.parent.GetComponent<Move>().actualSpeed * 50;
+                speedinKMHfloat = player.GetComponent<Move>().actualSpeed * 50;
                 speedInKMH = (int)speedinKMHfloat;
-                Speedtext = speedInKMH.ToString() + " Km/h";
-                textObject.text = Speedtext;
-                return;
+                changeableText = speedInKMH.ToString() + " Km/h";
+                textObject.text = changeableText;
+                break;
             case 1:
-                return;
-        }*/
+                changeableText = System.Math.Round(Time.timeSinceLevelLoad,1).ToString();
+                textObject.text = changeableText + " s";
+                break;
+        }
     }
 }
