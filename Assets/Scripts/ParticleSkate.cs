@@ -30,7 +30,7 @@ public class ParticleSkate : MonoBehaviour
 
         ActualSpeed = transform.parent.GetComponent<Move>().actualSpeed;
 
-        if(ActualSpeed > 0.1f)
+        if(ActualSpeed > 0.1f && transform.parent.GetComponent<Move>().enabled)
         {
             stopped = false;
             PSVitesse.gameObject.SetActive(true);
