@@ -28,11 +28,15 @@ public class SkateManager : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "DeadlyObstacle")
+        if (other.tag == "DeadlyObstacle")
         {
             this.GetComponent<Move>().actualSpeed = 0;
             this.GetComponent<Move>().enabled = false;
             GameManager.instance.GameOver();
+        }
+        else if(other.tag == "Teleport")
+            {
+            this.transform.position = new Vector3 (this.transform.position.x, this.transform.position.y, other.gameObject.transform.Find("RespawnPoint").transform.position.z);
         }
     }
 

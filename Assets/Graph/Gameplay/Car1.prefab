@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3717234383398372334}
   m_Layer: 0
   m_Name: Car1
-  m_TagString: Untagged
+  m_TagString: DeadlyObstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -42,10 +42,10 @@ GameObject:
   - component: {fileID: 4316261300127216310}
   - component: {fileID: 1382991653949344764}
   - component: {fileID: 2455840266173034344}
-  - component: {fileID: 3755154947325912071}
+  - component: {fileID: 1221145691854895205}
   m_Layer: 0
   m_Name: default
-  m_TagString: Untagged
+  m_TagString: DeadlyObstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -111,17 +111,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &3755154947325912071
-MeshCollider:
+--- !u!65 &1221145691854895205
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4994597225432031629}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -2432090755550338912, guid: 7569deb2cebc303439358bab5445f260, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 2.84, y: 1, z: 1.54}
+  m_Center: {x: 0, y: 0.69, z: 0.08}
