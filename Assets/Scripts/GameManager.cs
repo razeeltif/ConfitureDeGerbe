@@ -35,16 +35,24 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (player.GetComponent<SkateManager>().endDetected && OVRInput.GetDown(OVRInput.Button.One))
+        {
+            //load next level
+        }
+        else if (player.GetComponent<SkateManager>().endDetected && OVRInput.GetDown(OVRInput.Button.Three))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
         //reset game when pressing 'A'
-        if(OVRInput.GetDown(OVRInput.Button.One)){
+        else if (OVRInput.GetDown(OVRInput.Button.One)){
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
 
-        if(SceneManager.GetActiveScene().name == "TutoScene")
+        /*if(SceneManager.GetActiveScene().name == "TutoScene")
         {
-            tutoPhase = Tutoriel(tutoPhase, tutoText.GetComponent<Text>(), player.GetComponent<Move>().actualSpeed, Camera.main.transform.rotation.eulerAngles.z);
+            tutoPhase = Tutoriel(tutoPhase, tutoText.GetComponent<Text>(), player.GetComponent<MoveUpdated>().actualSpeed, Camera.main.transform.rotation.eulerAngles.z);
             if (tutoPhase == 4) tutoLoopObj.SetActive(false);
-        }
+        }*/
     }
 
 

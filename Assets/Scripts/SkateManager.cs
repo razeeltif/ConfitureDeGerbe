@@ -8,6 +8,8 @@ public class SkateManager : MonoBehaviour
 
     SphereCollider headCollider;
 
+    public bool endDetected;
+
 
     void Awake()
     {
@@ -39,6 +41,11 @@ public class SkateManager : MonoBehaviour
         else if(other.tag == "Teleport")
             {
             this.transform.position = new Vector3 (this.transform.position.x, this.transform.position.y, other.gameObject.transform.Find("RespawnPoint").transform.position.z);
+        }
+        else if (other.tag == "PlayerStopper")
+        {
+            gameObject.GetComponent<MoveUpdated>().CanMove = false;
+            endDetected = true;
         }
     }
 
