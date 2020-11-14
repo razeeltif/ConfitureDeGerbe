@@ -52,7 +52,8 @@ public class GameManager : MonoBehaviour
 
 
 
-    public void GameOver(){
+    public void GameOver()
+    {
         // TODO : ECRAN DE GAME OVER + INDIQUER RESET SUR 'A'
         Debug.Log("DEA DEA DEA DEA DEA DEAD EA DEA DEA");
     }
