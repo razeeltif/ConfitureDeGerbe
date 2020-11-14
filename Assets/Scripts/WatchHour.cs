@@ -34,7 +34,7 @@ public class WatchHour : MonoBehaviour
         switch (watchMode)
         {
             case 0:
-                speedinKMHfloat = player.GetComponent<Move>().actualSpeed * 50;
+                speedinKMHfloat = player.GetComponent<MoveUpdated>().speedCoef * 50;
                 speedInKMH = (int)speedinKMHfloat;
                 changeableText = speedInKMH.ToString() + " Km/h";
                 textObject.text = changeableText;

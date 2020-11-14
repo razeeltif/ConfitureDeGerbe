@@ -9,7 +9,8 @@ public class SkateManager : MonoBehaviour
     SphereCollider headCollider;
 
 
-    void Awake(){
+    void Awake()
+    {
         headCollider = GetComponent<SphereCollider>();
     }
 
@@ -22,7 +23,7 @@ public class SkateManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        UpdateHeadColliderPosition();
+       // UpdateHeadColliderPosition();
     }
 
 
@@ -30,8 +31,9 @@ public class SkateManager : MonoBehaviour
     {
         if(other.tag == "DeadlyObstacle")
         {
-            this.GetComponent<Move>().actualSpeed = 0;
-            this.GetComponent<Move>().enabled = false;
+            GetComponentInParent<MoveUpdated>().speedCoef = 0;
+            GetComponentInParent<Rigidbody>().velocity = Vector3.zero;
+            GetComponentInParent<MoveUpdated>().enabled = false;
             GameManager.instance.GameOver();
         }
     }

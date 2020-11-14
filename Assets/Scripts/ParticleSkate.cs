@@ -13,7 +13,7 @@ public class ParticleSkate : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ActualSpeed = transform.parent.GetComponent<Move>().actualSpeed;
+        ActualSpeed = transform.parent.GetComponent<MoveUpdated>().speedCoef;
         PSVitesse.gameObject.SetActive(false);
         PSTurbo.gameObject.SetActive(false);
         PSTurbo2.gameObject.SetActive(false);
@@ -28,9 +28,9 @@ public class ParticleSkate : MonoBehaviour
         var EmissionPST1 = PSTurbo.emission;
         var EmissionPST2 = PSTurbo2.emission;
 
-        ActualSpeed = transform.parent.GetComponent<Move>().actualSpeed;
+        ActualSpeed = transform.parent.GetComponent<MoveUpdated>().speedCoef;
 
-        if(ActualSpeed > 0.1f && transform.parent.GetComponent<Move>().enabled)
+        if(ActualSpeed > 0.1f && transform.parent.GetComponent<MoveUpdated>().enabled)
         {
             stopped = false;
             PSVitesse.gameObject.SetActive(true);
