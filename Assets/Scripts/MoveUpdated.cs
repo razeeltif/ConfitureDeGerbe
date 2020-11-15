@@ -127,10 +127,7 @@ public class MoveUpdated : MonoBehaviour
         Vector3 norm = hit.normal;
         Vector3 vect1 = new Vector3(0,-norm.z*2.2f,1);
         newVec = (forward + vect1).normalized;
-
-        Vector3 random = new Vector3(0,0,1);
-        if(newVec != random)
-            Debug.Log(newVec);
+ 
         return resultisOnGround;
 
     }
