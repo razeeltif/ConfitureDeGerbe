@@ -2028,14 +2028,14 @@ Transform:
   - {fileID: 834468645}
   - {fileID: 125015872}
   - {fileID: 1945450940}
+  - {fileID: 647506763}
   - {fileID: 940815063}
   - {fileID: 809103345}
   - {fileID: 842867833}
   - {fileID: 2027550765}
-  - {fileID: 683192592}
   - {fileID: 636368447}
   - {fileID: 258826071}
-  - {fileID: 647506763}
+  - {fileID: 683192592}
   - {fileID: 1282022266}
   - {fileID: 109323167}
   - {fileID: 1212846224}
@@ -21436,26 +21436,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4595770330240531592, guid: 6c7baad5a9f2d074c88ae2449623f2c5,
-        type: 3}
-      propertyPath: MaxSpeed
-      value: 9000
-      objectReference: {fileID: 0}
-    - target: {fileID: 4595770330240531592, guid: 6c7baad5a9f2d074c88ae2449623f2c5,
-        type: 3}
-      propertyPath: SpeedStrife
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4595770330240531592, guid: 6c7baad5a9f2d074c88ae2449623f2c5,
-        type: 3}
-      propertyPath: speedToStrifeCoef
-      value: 1.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4595770331920369757, guid: 6c7baad5a9f2d074c88ae2449623f2c5,
-        type: 3}
-      propertyPath: mainCamera
-      value: 
-      objectReference: {fileID: 2054831355}
     - target: {fileID: 5867143057184853773, guid: 6c7baad5a9f2d074c88ae2449623f2c5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -21518,12 +21498,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c7baad5a9f2d074c88ae2449623f2c5, type: 3}
---- !u!1 &1482763855 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5867143057184853780, guid: 6c7baad5a9f2d074c88ae2449623f2c5,
-    type: 3}
-  m_PrefabInstance: {fileID: 1482763854}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1490128037 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2390029730756422931, guid: 1e68c985f7dfa464f83b730fec8b3922,
@@ -27368,9 +27342,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 529f53864dba27e4f8b4b743f532c6e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1482763855}
   tutoText: {fileID: 0}
   tutoLoopObj: {fileID: 0}
+  actualCheckpoint: {fileID: 0}
 --- !u!4 &1807352193
 Transform:
   m_ObjectHideFlags: 0
@@ -29974,12 +29948,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2390029730756422931, guid: 1e68c985f7dfa464f83b730fec8b3922,
     type: 3}
   m_PrefabInstance: {fileID: 2054077097}
-  m_PrefabAsset: {fileID: 0}
---- !u!20 &2054831355 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 5867143055659142780, guid: 6c7baad5a9f2d074c88ae2449623f2c5,
-    type: 3}
-  m_PrefabInstance: {fileID: 1482763854}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2064840741
 PrefabInstance:

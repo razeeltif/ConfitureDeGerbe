@@ -18,7 +18,7 @@ public class SkateManager : MonoBehaviour
             Destroy(gameObject);
         }
 
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
     }
 
 
@@ -32,9 +32,11 @@ public class SkateManager : MonoBehaviour
     {
         if (other.tag == "DeadlyObstacle")
         {
-            GetComponentInParent<MoveUpdated>().speedCoef = 0;
+
+            GetComponent<MoveUpdated>().Stop();
+          /*GetComponentInParent<MoveUpdated>().speedCoef = 0;
             GetComponentInParent<Rigidbody>().velocity = Vector3.zero;
-            GetComponentInParent<MoveUpdated>().enabled = false;
+            GetComponentInParent<MoveUpdated>().enabled = false;*/
             GameManager.instance.GameOver();
         }
         else if(other.tag == "Teleport")
@@ -43,7 +45,8 @@ public class SkateManager : MonoBehaviour
         }
         else if (other.tag == "PlayerStopper")
         {
-            gameObject.GetComponent<MoveUpdated>().CanMove = false;
+
+            GetComponent<MoveUpdated>().Stop();
             endDetected = true;
         }
         
@@ -55,10 +58,10 @@ public class SkateManager : MonoBehaviour
         
     }
 
-    public void ResetPlayer()
+ /*   public void ResetPlayer()
     {
         GetComponent<MoveUpdated>().CanMove = false;
         GetComponent<Rigidbody>().velocity = Vector3.zero;
-    }
+    }*/
 
 }
