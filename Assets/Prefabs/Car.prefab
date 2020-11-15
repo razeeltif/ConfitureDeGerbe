@@ -8,10 +8,10 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5880715607293882015}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.84, y: 1, z: 1.54}
+  m_Size: {x: 2.83, y: 1.6, z: 1.54}
   m_Center: {x: 0, y: 0.69, z: 0.08}
 --- !u!1001 &6727558149216523214
 PrefabInstance:
@@ -23,17 +23,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 7569deb2cebc303439358bab5445f260,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -56.2
+      value: -51.3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7569deb2cebc303439358bab5445f260,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.28
+      value: 6.07
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7569deb2cebc303439358bab5445f260,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 203.9
+      value: 130.1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7569deb2cebc303439358bab5445f260,
         type: 3}
@@ -98,12 +98,12 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7569deb2cebc303439358bab5445f260,
         type: 3}
       propertyPath: m_Name
-      value: Car
+      value: Car (6)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7569deb2cebc303439358bab5445f260,
         type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7569deb2cebc303439358bab5445f260,
         type: 3}
@@ -113,7 +113,7 @@ PrefabInstance:
     - target: {fileID: 8164078558771037576, guid: 7569deb2cebc303439358bab5445f260,
         type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7569deb2cebc303439358bab5445f260, type: 3}
