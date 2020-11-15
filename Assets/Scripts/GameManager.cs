@@ -1,8 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.SceneManagement;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using OVR;
 
 public class GameManager : MonoBehaviour
@@ -10,9 +10,15 @@ public class GameManager : MonoBehaviour
 
     static public GameManager instance;
     int tutoPhase;
-    public GameObject player;
+
     public GameObject tutoText;
     public GameObject tutoLoopObj;
+
+    public Checkpoint actualCheckpoint = null;
+
+    private Vector3 initialPlayerPosition;
+
+    private Vector3 LastCheckpointPosition = Vector3.zero;
 
     void Awake()
     {
@@ -28,36 +34,33 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        initialPlayerPosition = SkateManager.instance.transform.position;
         tutoPhase = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (player.GetComponent<SkateManager>().endDetected && OVRInput.GetDown(OVRInput.Button.One))
+        if (SkateManager.instance.endDetected && OVRInput.GetDown(OVRInput.Button.One))
         {
             //load next level
         }
-        else if (player.GetComponent<SkateManager>().endDetected && OVRInput.GetDown(OVRInput.Button.Three))
+        else if (SkateManager.instance.endDetected && OVRInput.GetDown(OVRInput.Button.Three))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+           // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
         //reset game when pressing 'A'
         else if (OVRInput.GetDown(OVRInput.Button.One)){
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            LoadLastCheckPoint();
         }
 
         if(SceneManager.GetActiveScene().name == "TutoScene")
         {
-            tutoPhase = Tutoriel(tutoPhase, tutoText.GetComponent<Text>(), player.GetComponent<MoveUpdated>().speedCoef, Camera.main.transform.rotation.eulerAngles.z);
+            tutoPhase = Tutoriel(tutoPhase, tutoText.GetComponent<Text>(), SkateManager.instance.GetComponent<MoveUpdated>().speedCoef, Camera.main.transform.rotation.eulerAngles.z);
             if (tutoPhase == 4) tutoLoopObj.SetActive(false);
         }
     }
-
-
-
-
 
 
     public void GameOver()
@@ -65,6 +68,7 @@ public class GameManager : MonoBehaviour
         // TODO : ECRAN DE GAME OVER + INDIQUER RESET SUR 'A'
         Debug.Log("DEA DEA DEA DEA DEA DEAD EA DEA DEA");
     }
+
 
     public int Tutoriel(int phase, Text textObject, float pSpeed, float eulerCasqueZ)
     {
@@ -94,5 +98,28 @@ public class GameManager : MonoBehaviour
                 break;
         }
         return phase;
-        }
     }
+
+        public void SaveCheckPoint(Vector3 checkpointPosition)
+    {
+        LastCheckpointPosition = checkpointPosition;
+    }
+
+    public void LoadLastCheckPoint()
+    {
+
+        SkateManager.instance.GetComponent<MoveUpdated>().Stop();
+
+        // no checkpoint passed, spawn at the beginning
+        if(LastCheckpointPosition == Vector3.zero)
+        {
+            SkateManager.instance.transform.position = initialPlayerPosition;
+        }
+        else
+        {
+            SkateManager.instance.transform.position = LastCheckpointPosition;
+        }
+
+    }
+
+}
