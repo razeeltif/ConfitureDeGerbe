@@ -54,6 +54,10 @@ public class GameManager : MonoBehaviour
             //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             LoadLastCheckPoint();
         }
+        else if (OVRInput.GetDown(OVRInput.Button.Two)){
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            ScenesMaster.instance.LoadNextLevel();
+        }
 
         if(SceneManager.GetActiveScene().name == "TutoScene")
         {
@@ -121,5 +125,7 @@ public class GameManager : MonoBehaviour
         }
 
     }
+
+
 
 }

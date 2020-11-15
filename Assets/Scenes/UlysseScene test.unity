@@ -17297,38 +17297,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 941942646}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1024587870 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3649911448822745301, guid: 8d5e2e636d6373b44ad2cace1add0bdb,
-    type: 3}
-  m_PrefabInstance: {fileID: 4224266004320760762}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &1024587871
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1024587870}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 10, z: 1}
-  m_Center: {x: 0, y: 2.5, z: 0}
---- !u!114 &1024587872
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1024587870}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a5d0a0c68ee07b43b26c99ddb8c501f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  RespawnPoint: {fileID: 1279336130}
 --- !u!1001 &1028904657
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19660,12 +19628,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e68c985f7dfa464f83b730fec8b3922, type: 3}
---- !u!4 &1279336130 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1861660640298758061, guid: 8d5e2e636d6373b44ad2cace1add0bdb,
-    type: 3}
-  m_PrefabInstance: {fileID: 4224266004320760762}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1280565496
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24132,6 +24094,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84ceb881862c6ed42aaa836e485a1845, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelsName:
+  - TutoScene
+  - Level1
+  - Level2
+  - Level3
+  - Level4
+  - Level5
+  levelIndex: 0
 --- !u!1001 &1641872060
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30880,25 +30850,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1029378000810779436, guid: 8d5e2e636d6373b44ad2cace1add0bdb,
-        type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1861660640298758061, guid: 8d5e2e636d6373b44ad2cace1add0bdb,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.932
-      objectReference: {fileID: 0}
     - target: {fileID: 3649911448822745301, guid: 8d5e2e636d6373b44ad2cace1add0bdb,
         type: 3}
       propertyPath: m_Name
       value: CheckPoint
-      objectReference: {fileID: 0}
-    - target: {fileID: 3649911448822745301, guid: 8d5e2e636d6373b44ad2cace1add0bdb,
-        type: 3}
-      propertyPath: m_TagString
-      value: Checkpoint
       objectReference: {fileID: 0}
     - target: {fileID: 4173930528191697519, guid: 8d5e2e636d6373b44ad2cace1add0bdb,
         type: 3}

@@ -8,7 +8,10 @@ public class ScenesMaster : MonoBehaviour
 
 
     public static ScenesMaster instance;
+    public string[] levelsName;
+    public int levelIndex = 0;
 
+    
     private void Awake()
     {
         if(!instance){
@@ -32,6 +35,13 @@ public class ScenesMaster : MonoBehaviour
         
     }
 
-
+    public void LoadNextLevel()
+    {
+        if(levelIndex < levelsName.Length)
+        {
+            SceneManager.LoadScene(levelsName[levelIndex]);
+            levelIndex++;
+        }
+    }
 
 }
