@@ -9,6 +9,7 @@ TagManager:
   - DeadlyObstacle
   - Checkpoint
   - Teleport
+  - PlayerStopper
   layers:
   - Default
   - TransparentFX

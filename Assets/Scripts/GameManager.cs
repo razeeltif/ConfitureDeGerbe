@@ -48,11 +48,11 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
 
-        /*if(SceneManager.GetActiveScene().name == "TutoScene")
+        if(SceneManager.GetActiveScene().name == "TutoScene")
         {
-            tutoPhase = Tutoriel(tutoPhase, tutoText.GetComponent<Text>(), player.GetComponent<MoveUpdated>().actualSpeed, Camera.main.transform.rotation.eulerAngles.z);
+            tutoPhase = Tutoriel(tutoPhase, tutoText.GetComponent<Text>(), player.GetComponent<MoveUpdated>().speedCoef, Camera.main.transform.rotation.eulerAngles.z);
             if (tutoPhase == 4) tutoLoopObj.SetActive(false);
-        }*/
+        }
     }
 
 
