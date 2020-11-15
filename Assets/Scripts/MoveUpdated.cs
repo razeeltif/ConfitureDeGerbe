@@ -18,8 +18,6 @@ public class MoveUpdated : MonoBehaviour
 
     public float minStrifeAngle = 10f;
     public float maxStrifeAngle = 90f;
-    
-    public float speedToStrifeCoef = 3;
 
     [HideInInspector]
     public bool CanMove = false;
@@ -65,6 +63,13 @@ public class MoveUpdated : MonoBehaviour
 
         if(CanMove)
         {
+            MoveForward();
+            Strife(SpeedStrife);
+        }
+    }
+
+    private void MoveForward()
+    {
             speedCoef = GetSpeedCoef();
             speedCoef *= speedCoef;
 
@@ -75,29 +80,27 @@ public class MoveUpdated : MonoBehaviour
             {
                 rb.velocity = vecAngleBetweenSkateAndGround * speedCoef * MaxSpeed * Time.fixedDeltaTime;
             }
-            Strife(SpeedStrife, speedCoef);
-        }
     }
 
-    private void Strife(float speedStrife, float speedCoef){
+    private void Strife(float speedStrife){
 
-
-        speedCoef *= speedToStrifeCoef;
-        //if(actualSpeed > 1) actualSpeed = 1;
+        float speedToStrifeCoef = GetSpeedCoef();
 
         float HeadLeanAngle = MainCamera.transform.rotation.eulerAngles.z;
 
         // strife left
         if(HeadLeanAngle < 180){
         
-            float coef = Mathf.InverseLerp(minStrifeAngle, maxStrifeAngle, HeadLeanAngle);
-            transform.Translate(-transform.right * coef * speedStrife * speedCoef);
+            float angleCoef = Mathf.InverseLerp(minStrifeAngle, maxStrifeAngle, HeadLeanAngle);
+            rb.velocity = new Vector3(-angleCoef * speedStrife * speedToStrifeCoef, rb.velocity.y, rb.velocity.z);
+           // transform.Translate(-transform.right * angleCoef * speedStrife * speedToStrifeCoef);
 
         // strife right
         }else{
             HeadLeanAngle = 360 - HeadLeanAngle;
-            float coef = Mathf.InverseLerp(minStrifeAngle, maxStrifeAngle, HeadLeanAngle);
-            transform.Translate(transform.right * coef * speedStrife * speedCoef);
+            float angleCoef = Mathf.InverseLerp(minStrifeAngle, maxStrifeAngle, HeadLeanAngle);
+            rb.velocity = new Vector3(angleCoef * speedStrife * speedToStrifeCoef, rb.velocity.y, rb.velocity.z);
+           // transform.Translate(transform.right * angleCoef * speedStrife * speedToStrifeCoef);
         }
     }
 
@@ -128,4 +131,5 @@ public class MoveUpdated : MonoBehaviour
         return resultisOnGround;
 
     }
+
 }

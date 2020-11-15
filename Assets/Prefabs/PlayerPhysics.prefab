@@ -216,7 +216,7 @@ GameObject:
   - component: {fileID: 5867143055639296968}
   - component: {fileID: 4595770331920369754}
   - component: {fileID: 4595770331920369753}
-  - component: {fileID: 4595770331920369757}
+  - component: {fileID: 2065803762}
   m_Layer: 11
   m_Name: CenterEyeAnchor
   m_TagString: MainCamera
@@ -395,7 +395,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.3
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4595770331920369757
+--- !u!114 &2065803762
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -404,10 +404,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5867143055639296969}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5665839bba3e7a74283f301f29a7fcd2, type: 3}
+  m_Script: {fileID: 11500000, guid: edac6434f6211264b9a9856d671df998, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCamera: {fileID: 0}
+  SkateRigibody: {fileID: 5867143057184853782}
 --- !u!1 &5867143055686692675
 GameObject:
   m_ObjectHideFlags: 0
@@ -11641,6 +11641,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 5867143055659142780}
+  endDetected: 0
 --- !u!114 &4595770330240531592
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11657,10 +11658,9 @@ MonoBehaviour:
   maxHeight: 2
   minHeight: 1
   height: 0
-  SpeedStrife: 0.3
+  SpeedStrife: 20
   minStrifeAngle: 5
   maxStrifeAngle: 45
-  speedToStrifeCoef: 1.5
   CanMove: 0
   speedCoef: 0
   IsOnGround: 0
