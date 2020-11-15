@@ -4,28 +4,27 @@ using UnityEngine;
 
 public class SkateManager : MonoBehaviour
 {
-    public Camera mainCamera;
 
-    SphereCollider headCollider;
+    public static SkateManager instance;
 
     public bool endDetected;
 
 
-    void Awake()
+    private void Awake()
     {
-        headCollider = GetComponent<SphereCollider>();
+        if(!instance){
+            instance = this;
+        }else{
+            Destroy(gameObject);
+        }
+
+        DontDestroyOnLoad(gameObject);
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
     {
-       // UpdateHeadColliderPosition();
     }
 
 
@@ -47,11 +46,19 @@ public class SkateManager : MonoBehaviour
             gameObject.GetComponent<MoveUpdated>().CanMove = false;
             endDetected = true;
         }
+        
+        if (other.tag == "Checkpoint")
+        {
+            GameManager.instance.SaveCheckPoint(other.GetComponent<Checkpoint>().RespawnPoint.position);
+        }
+
+        
     }
 
-    public void UpdateHeadColliderPosition()
+    public void ResetPlayer()
     {
-        headCollider.center = mainCamera.transform.localPosition;
+        GetComponent<MoveUpdated>().CanMove = false;
+        GetComponent<Rigidbody>().velocity = Vector3.zero;
     }
 
 }

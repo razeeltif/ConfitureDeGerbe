@@ -8915,12 +8915,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2102230911}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &2109431107 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5867143057184853780, guid: 6c7baad5a9f2d074c88ae2449623f2c5,
-    type: 3}
-  m_PrefabInstance: {fileID: 7974523925807969169}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2110126573
 GameObject:
   m_ObjectHideFlags: 0
@@ -9123,9 +9117,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 529f53864dba27e4f8b4b743f532c6e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 2109431107}
   tutoText: {fileID: 0}
   tutoLoopObj: {fileID: 0}
+  actualCheckpoint: {fileID: 0}
 --- !u!4 &2129027403
 Transform:
   m_ObjectHideFlags: 0

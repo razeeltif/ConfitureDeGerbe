@@ -119,7 +119,7 @@ public class MoveUpdated : MonoBehaviour
 
     private bool GetGroundAngle(Vector3 initialPosition, Vector3 forward, out Vector3 newVec){
 
-        float distance = 1f;
+        float distance = 1.5f;
         bool resultisOnGround = false;
  
         RaycastHit hit;
@@ -127,8 +127,19 @@ public class MoveUpdated : MonoBehaviour
         Vector3 norm = hit.normal;
         Vector3 vect1 = new Vector3(0,-norm.z*2.2f,1);
         newVec = (forward + vect1).normalized;
-        Debug.Log(newVec);
+
+        Vector3 random = new Vector3(0,0,1);
+        if(newVec != random)
+            Debug.Log(newVec);
         return resultisOnGround;
+
+    }
+
+    public void Stop()
+    {
+        speedCoef = 0;
+        CanMove = false;
+        GetComponentInParent<Rigidbody>().velocity = Vector3.zero;
 
     }
 
