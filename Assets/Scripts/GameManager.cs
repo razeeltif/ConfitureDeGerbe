@@ -20,6 +20,8 @@ public class GameManager : MonoBehaviour
 
     private Vector3 LastCheckpointPosition = Vector3.zero;
 
+    public int deathCount = 0;
+
     void Awake()
     {
         if(instance == null)

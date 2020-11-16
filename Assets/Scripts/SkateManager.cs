@@ -33,10 +33,7 @@ public class SkateManager : MonoBehaviour
         if (other.tag == "DeadlyObstacle")
         {
 
-            GetComponent<MoveUpdated>().Stop();
-          /*GetComponentInParent<MoveUpdated>().speedCoef = 0;
-            GetComponentInParent<Rigidbody>().velocity = Vector3.zero;
-            GetComponentInParent<MoveUpdated>().enabled = false;*/
+            instance.GetComponent<MoveUpdated>().Stop();
             GameManager.instance.GameOver();
         }
         else if(other.tag == "Teleport")

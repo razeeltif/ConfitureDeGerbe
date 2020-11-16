@@ -21249,6 +21249,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerPhysics
       objectReference: {fileID: 0}
+    - target: {fileID: 5867143057184853780, guid: 6c7baad5a9f2d074c88ae2449623f2c5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c7baad5a9f2d074c88ae2449623f2c5, type: 3}
 --- !u!1001 &1437985572
@@ -26565,6 +26570,7 @@ MonoBehaviour:
   tutoText: {fileID: 0}
   tutoLoopObj: {fileID: 0}
   actualCheckpoint: {fileID: 0}
+  deathCount: 0
 --- !u!4 &1807352193
 Transform:
   m_ObjectHideFlags: 0
