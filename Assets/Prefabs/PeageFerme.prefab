@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4837015108861854504}
   - component: {fileID: 8216040973915629500}
   - component: {fileID: 7903524758559117644}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: default
   m_TagString: DeadlyObstacle
   m_Icon: {fileID: 0}
@@ -88,7 +88,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1531654603061635417}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 5.9, y: 0.76, z: 1.9}
@@ -103,7 +103,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7171873502411590458}
   - component: {fileID: 6137488480339857900}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: PeageFerme
   m_TagString: DeadlyObstacle
   m_Icon: {fileID: 0}
@@ -133,7 +133,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7551494647709159808}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1.03, y: 4, z: 1}
