@@ -30,9 +30,9 @@ public class SkateManager : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
+        Debug.LogError(other.name);
         if (other.tag == "DeadlyObstacle")
         {
-
             instance.GetComponent<MoveUpdated>().Stop();
             GameManager.instance.GameOver();
         }

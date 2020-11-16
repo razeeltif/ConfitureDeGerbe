@@ -3131,6 +3131,12 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -2432090755550338912, guid: 799954d3beadd7a4ca2c10243044721c, type: 3}
+--- !u!1 &133282714 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2301536534687933940, guid: 6c7baad5a9f2d074c88ae2449623f2c5,
+    type: 3}
+  m_PrefabInstance: {fileID: 1482763854}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &133870992
 GameObject:
   m_ObjectHideFlags: 0
@@ -33772,7 +33778,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tutoText: {fileID: 0}
   tutoLoopObj: {fileID: 0}
-  deathToDisplay: {fileID: 0}
+  deathToDisplay: {fileID: 133282714}
   actualCheckpoint: {fileID: 0}
   deathCount: 0
 --- !u!4 &1807352193
