@@ -11,9 +11,7 @@ public class HeadManager : MonoBehaviour
     {
         if (other.tag == "DeadlyObstacle")
         {
-            SkateRigibody.gameObject.GetComponent<MoveUpdated>().speedCoef = 0;
-            SkateRigibody.gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
-            SkateRigibody.gameObject.GetComponent<MoveUpdated>().enabled = false;
+            SkateManager.instance.GetComponent<MoveUpdated>().Stop();
             GameManager.instance.GameOver();
         }   
     }
