@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2480348665629885662}
   - component: {fileID: 7491932662286077338}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: PeageOuvert
   m_TagString: DeadlyObstacle
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2963411800152579684}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 5, z: 1.24}
@@ -56,7 +56,7 @@ GameObject:
   - component: {fileID: 3034234050533848454}
   - component: {fileID: 201796215003991244}
   - component: {fileID: 3740616312556611672}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}

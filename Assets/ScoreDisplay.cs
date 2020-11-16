@@ -14,7 +14,6 @@ public class ScoreDisplay : MonoBehaviour
 
     bool printed;
 
-    public GameObject gameManager;
     public GameObject player;
 
     // Start is called before the first frame update
@@ -30,7 +29,7 @@ public class ScoreDisplay : MonoBehaviour
     {
         if(player.GetComponent<SkateManager>().endDetected && !printed)
         {
-            deathCount = gameManager.GetComponent<GameManager>().deathCount;
+            deathCount = GameManager.instance.deathCount;
             timeStamp = Time.timeSinceLevelLoad;
             printed = true;
         }

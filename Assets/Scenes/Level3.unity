@@ -27956,7 +27956,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: 6c7baad5a9f2d074c88ae2449623f2c5, type: 3}
 --- !u!1 &1482763855 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 5867143057184853780, guid: 6c7baad5a9f2d074c88ae2449623f2c5,
+  m_CorrespondingSourceObject: {fileID: 2301536534687933940, guid: 6c7baad5a9f2d074c88ae2449623f2c5,
     type: 3}
   m_PrefabInstance: {fileID: 1482763854}
   m_PrefabAsset: {fileID: 0}
@@ -34802,9 +34802,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 529f53864dba27e4f8b4b743f532c6e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1482763855}
   tutoText: {fileID: 0}
   tutoLoopObj: {fileID: 0}
+  deathToDisplay: {fileID: 1482763855}
+  actualCheckpoint: {fileID: 0}
+  deathCount: 0
 --- !u!4 &1807352193
 Transform:
   m_ObjectHideFlags: 0

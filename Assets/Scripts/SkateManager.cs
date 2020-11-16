@@ -55,10 +55,4 @@ public class SkateManager : MonoBehaviour
         
     }
 
- /*   public void ResetPlayer()
-    {
-        GetComponent<MoveUpdated>().CanMove = false;
-        GetComponent<Rigidbody>().velocity = Vector3.zero;
-    }*/
-
 }

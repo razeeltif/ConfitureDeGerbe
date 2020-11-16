@@ -26210,6 +26210,12 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &1781711582 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2301536534687933940, guid: 6c7baad5a9f2d074c88ae2449623f2c5,
+    type: 3}
+  m_PrefabInstance: {fileID: 1436480015}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1783685859 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2390029730756422931, guid: 1e68c985f7dfa464f83b730fec8b3922,
@@ -26569,6 +26575,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tutoText: {fileID: 0}
   tutoLoopObj: {fileID: 0}
+  deathToDisplay: {fileID: 1781711582}
   actualCheckpoint: {fileID: 0}
   deathCount: 0
 --- !u!4 &1807352193

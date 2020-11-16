@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject tutoText;
     public GameObject tutoLoopObj;
+    public GameObject deathToDisplay;
 
     public Checkpoint actualCheckpoint = null;
 
@@ -20,7 +21,8 @@ public class GameManager : MonoBehaviour
 
     private Vector3 LastCheckpointPosition = Vector3.zero;
 
-    public int deathCount = 0;
+    [HideInInspector]
+    public int deathCount;
 
     void Awake()
     {
@@ -54,6 +56,8 @@ public class GameManager : MonoBehaviour
         //reset game when pressing 'A'
         else if (OVRInput.GetDown(OVRInput.Button.One)){
             //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            deathToDisplay.SetActive(false);
+            deathCount++;
             LoadLastCheckPoint();
         }
         else if (OVRInput.GetDown(OVRInput.Button.Two)){
@@ -71,8 +75,7 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-        // TODO : ECRAN DE GAME OVER + INDIQUER RESET SUR 'A'
-        Debug.Log("DEA DEA DEA DEA DEA DEAD EA DEA DEA");
+        deathToDisplay.SetActive(true);
     }
 
 
