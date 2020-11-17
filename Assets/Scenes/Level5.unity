@@ -13118,12 +13118,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -2432090755550338912, guid: 7ab631a039f480d4093edab4d36076d5, type: 3}
---- !u!1 &675138481 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 816349249417838230, guid: 6c7baad5a9f2d074c88ae2449623f2c5,
-    type: 3}
-  m_PrefabInstance: {fileID: 1482763854}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &680882278
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26190,7 +26184,7 @@ PrefabInstance:
     - target: {fileID: 5867143057184853773, guid: 6c7baad5a9f2d074c88ae2449623f2c5,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3180
+      value: -53
       objectReference: {fileID: 0}
     - target: {fileID: 5867143057184853773, guid: 6c7baad5a9f2d074c88ae2449623f2c5,
         type: 3}
@@ -27355,6 +27349,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1542273652}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1542430476 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2301536534687933940, guid: 6c7baad5a9f2d074c88ae2449623f2c5,
+    type: 3}
+  m_PrefabInstance: {fileID: 1482763854}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1546014191
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28331,12 +28331,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2356867207206224424, guid: 8cf4c5a5aa17ccd4297d6ca2ce882973,
     type: 3}
   m_PrefabInstance: {fileID: 1587047985}
-  m_PrefabAsset: {fileID: 0}
---- !u!224 &1594562897 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 690596895596262158, guid: 6c7baad5a9f2d074c88ae2449623f2c5,
-    type: 3}
-  m_PrefabInstance: {fileID: 1482763854}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1604300957
 PrefabInstance:
@@ -32701,7 +32695,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tutoText: {fileID: 0}
   tutoLoopObj: {fileID: 0}
-  deathScreen: {fileID: 675138481}
+  deathToDisplay: {fileID: 1542430476}
   actualCheckpoint: {fileID: 0}
   deathCount: 0
 --- !u!4 &1807352193
@@ -35957,84 +35951,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2068588019}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2072429810
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2072429811}
-  - component: {fileID: 2072429813}
-  - component: {fileID: 2072429812}
-  m_Layer: 5
-  m_Name: Text (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &2072429811
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2072429810}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
-  m_Children: []
-  m_Father: {fileID: 1594562897}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -21.000004}
-  m_SizeDelta: {x: 160, y: 30}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2072429812
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2072429810}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: f0c7b0ff894fa1b44931cffee06c73ab, type: 3}
-    m_FontSize: 14
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 1
-    m_MaxSize: 40
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: Press A to respawn
---- !u!222 &2072429813
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2072429810}
-  m_CullTransparentMesh: 0
 --- !u!1001 &2083120400
 PrefabInstance:
   m_ObjectHideFlags: 0
