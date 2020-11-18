@@ -57,9 +57,16 @@ public class GameManager : MonoBehaviour
         //reset game when pressing 'A'
         else if (OVRInput.GetDown(OVRInput.Button.One)){
             //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            deathToDisplay.SetActive(false);
-            deathCount++;
-            LoadLastCheckPoint();
+            if(SkateManager.instance.endDetected)
+            {
+                ScenesMaster.instance.LoadNextLevel();
+            }
+            else
+            {
+                deathToDisplay.SetActive(false);
+                deathCount++;
+                LoadLastCheckPoint();
+            }
         }
         else if (OVRInput.GetDown(OVRInput.Button.Two)){
             //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -77,6 +84,7 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
+        SkateManager.instance.alive = false;
         deathToDisplay.SetActive(true);
     }
 
@@ -118,7 +126,7 @@ public class GameManager : MonoBehaviour
 
     public void LoadLastCheckPoint()
     {
-
+        SkateManager.instance.alive = true;
         SkateManager.instance.GetComponent<MoveUpdated>().Stop();
 
         // no checkpoint passed, spawn at the beginning

@@ -9,6 +9,8 @@ public class SkateManager : MonoBehaviour
 
     public bool endDetected;
 
+    public bool alive = true;
+
 
     private void Awake()
     {
