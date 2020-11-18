@@ -37265,7 +37265,7 @@ PrefabInstance:
     - target: {fileID: 2911659617626772472, guid: 919737e54de6e374ebbb3544916adeba,
         type: 3}
       propertyPath: m_Text
-      value: The end
+      value: Thanks for playing!
       objectReference: {fileID: 0}
     - target: {fileID: 8326421468175075059, guid: 919737e54de6e374ebbb3544916adeba,
         type: 3}

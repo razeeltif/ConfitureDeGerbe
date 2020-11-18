@@ -17162,6 +17162,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TutoPrompt
       objectReference: {fileID: 0}
+    - target: {fileID: 6534149382734355323, guid: e4c5f22093a556b4181b172e5145a2a5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4c5f22093a556b4181b172e5145a2a5, type: 3}
 --- !u!224 &6534149383113584199 stripped

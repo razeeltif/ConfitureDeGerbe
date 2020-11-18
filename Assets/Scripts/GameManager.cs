@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public GameObject tutoText;
     public GameObject tutoLoopObj;
     public GameObject deathToDisplay;
+    public GameObject tutoObject;
 
     public Checkpoint actualCheckpoint = null;
 
@@ -67,6 +68,7 @@ public class GameManager : MonoBehaviour
 
         if(SceneManager.GetActiveScene().name == "TutoScene")
         {
+            tutoObject.SetActive(true);
             tutoPhase = Tutoriel(tutoPhase, tutoText.GetComponent<Text>(), SkateManager.instance.GetComponent<MoveUpdated>().speedCoef, Camera.main.transform.rotation.eulerAngles.z);
             if (tutoPhase == 4) tutoLoopObj.SetActive(false);
         }

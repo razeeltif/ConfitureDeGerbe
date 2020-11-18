@@ -10932,7 +10932,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 7ab631a039f480d4093edab4d36076d5,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -60.199947
+      value: -61
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7ab631a039f480d4093edab4d36076d5,
         type: 3}
@@ -26608,7 +26608,7 @@ PrefabInstance:
     - target: {fileID: 4595770330240531592, guid: 6c7baad5a9f2d074c88ae2449623f2c5,
         type: 3}
       propertyPath: SpeedStrife
-      value: 0.7
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 4595770330240531592, guid: 6c7baad5a9f2d074c88ae2449623f2c5,
         type: 3}
