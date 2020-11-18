@@ -46,16 +46,8 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (SkateManager.instance.endDetected && OVRInput.GetDown(OVRInput.Button.One))
+        if (OVRInput.GetDown(OVRInput.Button.One))
         {
-            //load next level
-        }
-        else if (SkateManager.instance.endDetected && OVRInput.GetDown(OVRInput.Button.Three))
-        {
-           // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }
-        //reset game when pressing 'A'
-        else if (OVRInput.GetDown(OVRInput.Button.One)){
             //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             if(SkateManager.instance.endDetected)
             {
@@ -127,7 +119,7 @@ public class GameManager : MonoBehaviour
     public void LoadLastCheckPoint()
     {
         SkateManager.instance.alive = true;
-        SkateManager.instance.GetComponent<MoveUpdated>().Stop();
+        SkateManager.instance.GetComponent<MoveUpdated>().StopHard();
 
         // no checkpoint passed, spawn at the beginning
         if(LastCheckpointPosition == Vector3.zero)

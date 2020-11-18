@@ -9,6 +9,8 @@ public class SkateManager : MonoBehaviour
 
     public bool endDetected;
 
+    public float timeToStop = 2;
+
     public bool alive = true;
 
 
@@ -35,7 +37,7 @@ public class SkateManager : MonoBehaviour
         //Debug.LogError(other.name);
         if (other.tag == "DeadlyObstacle")
         {
-            instance.GetComponent<MoveUpdated>().Stop();
+            instance.GetComponent<MoveUpdated>().StopHard();
             GameManager.instance.GameOver();
         }
         else if(other.tag == "Teleport")
@@ -45,7 +47,7 @@ public class SkateManager : MonoBehaviour
         else if (other.tag == "PlayerStopper")
         {
 
-            GetComponent<MoveUpdated>().Stop();
+            GetComponent<MoveUpdated>().StopSoft(timeToStop);
             endDetected = true;
         }
         

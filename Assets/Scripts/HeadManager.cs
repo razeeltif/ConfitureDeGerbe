@@ -11,7 +11,7 @@ public class HeadManager : MonoBehaviour
     {
         if (other.tag == "DeadlyObstacle")
         {
-            SkateManager.instance.GetComponent<MoveUpdated>().Stop();
+            SkateManager.instance.GetComponent<MoveUpdated>().StopHard();
             GameManager.instance.GameOver();
         }   
     }

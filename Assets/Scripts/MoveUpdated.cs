@@ -19,10 +19,11 @@ public class MoveUpdated : MonoBehaviour
     public float minStrifeAngle = 10f;
     public float maxStrifeAngle = 90f;
 
+    public float graviteDuCul = 1.05f;
+
+
     [HideInInspector]
     public bool CanMove = false;
-
-
 
     [HideInInspector]
     public float speedCoef = 0;
@@ -38,6 +39,15 @@ public class MoveUpdated : MonoBehaviour
     private Rigidbody rb;
     public float distance = 1;
 
+    private bool isFreining = false;
+    private float initialTimeToStop;
+    private float timeToStopCooldown;
+
+    private float initialVelocity;
+    private float actualVelocity;
+
+    private Vector3 initialGravity;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -47,10 +57,12 @@ public class MoveUpdated : MonoBehaviour
     void Awake(){
         rb = GetComponent<Rigidbody>();
         MainCamera = GetComponentInChildren<AudioListener>();
+        initialGravity = Physics.gravity;
     }
 
     private void Update()
     {
+
      /*   Debug.DrawRay(front.transform.position, -Vector3.up * distance, Color.cyan);
         RaycastHit hit;
             Vector3 vecAngleBetweenSkateAndGround = new Vector3();
@@ -61,10 +73,34 @@ public class MoveUpdated : MonoBehaviour
     private void FixedUpdate(){
 
 
+        if(IsOnGround)
+        {
+           // GetComponent<Rigidbody>().drag = 0;
+            Physics.gravity = initialGravity;
+        }
+        else
+        {
+            //GetComponent<Rigidbody>().drag = dragIsTheAir;
+            Physics.gravity = new Vector3(initialGravity.x, Physics.gravity.y * graviteDuCul, initialGravity.z);
+        }
+
         if(CanMove)
         {
             MoveForward();
             Strife(SpeedStrife);
+        }
+        else if(isFreining && timeToStopCooldown > 0)
+        {
+            float coefTime = Mathf.InverseLerp(0, initialTimeToStop, timeToStopCooldown);
+           //float newVelocity = Mathf.Lerp(0, actualVelocity, coefTime);
+
+            GetComponent<Rigidbody>().velocity = new Vector3(0,0,GetComponent<Rigidbody>().velocity.z * coefTime);
+            speedCoef *= coefTime;
+
+            timeToStopCooldown -= Time.fixedDeltaTime;
+
+            if(timeToStopCooldown <= 0)
+                StopHard();
         }
     }
 
@@ -132,7 +168,19 @@ public class MoveUpdated : MonoBehaviour
 
     }
 
-    public void Stop()
+    // when end of the level
+    public void StopSoft(float timeToStop)
+    {
+        CanMove = false;
+        isFreining = true;
+        initialVelocity = GetComponent<Rigidbody>().velocity.z;
+        initialTimeToStop = timeToStop;
+        timeToStopCooldown = timeToStop;
+
+    }
+
+    // when reset or destroyed
+    public void StopHard()
     {
         speedCoef = 0;
         CanMove = false;
