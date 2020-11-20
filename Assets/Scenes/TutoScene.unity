@@ -757,7 +757,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelsName:
-  - TutoScene
   - Level1
   - Level2
   - Level3
@@ -776,7 +775,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &399764390
 PrefabInstance:
@@ -2140,7 +2139,7 @@ PrefabInstance:
     - target: {fileID: 8702841900747676745, guid: 919737e54de6e374ebbb3544916adeba,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8702841900747676745, guid: 919737e54de6e374ebbb3544916adeba,
         type: 3}
@@ -2414,7 +2413,7 @@ PrefabInstance:
     - target: {fileID: 6545893012560983077, guid: 4f244af83f7074f4eb188385075065fd,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6545893012560983077, guid: 4f244af83f7074f4eb188385075065fd,
         type: 3}
