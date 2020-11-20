@@ -30,7 +30,7 @@ public class MoveUpdated : MonoBehaviour
 
 
     [HideInInspector]
-    public bool IsOnGround = false;
+    public bool IsOnGround = true;
 
     public GameObject front;
 
