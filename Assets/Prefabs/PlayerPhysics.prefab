@@ -11644,6 +11644,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   endDetected: 0
+  timeToStop: 2
+  alive: 1
 --- !u!114 &4595770330240531592
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11656,13 +11658,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60d8040c7b75d2942a36622b50e0a018, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxSpeed: 9000
+  MaxSpeed: 7000
   maxHeight: 2
   minHeight: 1
   height: 0
-  SpeedStrife: 50
+  SpeedStrife: 40
   minStrifeAngle: 5
   maxStrifeAngle: 45
+  graviteDuCul: 1.02
   CanMove: 0
   speedCoef: 0
   IsOnGround: 0
