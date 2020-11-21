@@ -61,8 +61,8 @@ public class GameManager : MonoBehaviour
             }
         }
         else if (OVRInput.GetDown(OVRInput.Button.Two)){
-            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            ScenesMaster.instance.LoadNextLevel();
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            //ScenesMaster.instance.LoadNextLevel();
         }
 
         if(SceneManager.GetActiveScene().name == "TutoScene")

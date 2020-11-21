@@ -60,16 +60,6 @@ public class MoveUpdated : MonoBehaviour
         initialGravity = Physics.gravity;
     }
 
-    private void Update()
-    {
-
-     /*   Debug.DrawRay(front.transform.position, -Vector3.up * distance, Color.cyan);
-        RaycastHit hit;
-            Vector3 vecAngleBetweenSkateAndGround = new Vector3();
-            IsOnGround = GetGroundAngle(front.transform.position, this.transform.forward, out vecAngleBetweenSkateAndGround);
-        Debug.Log(IsOnGround);*/
-    }
-
     private void FixedUpdate(){
 
 
