@@ -312,9 +312,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 2
-  m_Text: 'Press A to proceed
-
-    Press X to restart'
+  m_Text: Press A to proceed
 --- !u!1 &8326421468175075059
 GameObject:
   m_ObjectHideFlags: 0
