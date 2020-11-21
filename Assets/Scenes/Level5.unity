@@ -4825,7 +4825,7 @@ PrefabInstance:
     - target: {fileID: 8633451135975112567, guid: cdf70afe604675e409ec0cb8c5f27614,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 8633451135975112567, guid: cdf70afe604675e409ec0cb8c5f27614,
         type: 3}
@@ -4876,6 +4876,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CheckPoint (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9196379173628677679, guid: cdf70afe604675e409ec0cb8c5f27614,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9196379173628677679, guid: cdf70afe604675e409ec0cb8c5f27614,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdf70afe604675e409ec0cb8c5f27614, type: 3}
