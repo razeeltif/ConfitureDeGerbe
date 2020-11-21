@@ -381,6 +381,11 @@ PrefabInstance:
       propertyPath: m_Size.x
       value: 0.41
       objectReference: {fileID: 0}
+    - target: {fileID: 2108435834371352075, guid: 291eb0458b25bbe40bc80e0cc95d1a48,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3585899609667047494, guid: 291eb0458b25bbe40bc80e0cc95d1a48,
         type: 3}
       propertyPath: m_Name
@@ -485,6 +490,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Size.x
       value: 0.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 2108435834371352075, guid: 291eb0458b25bbe40bc80e0cc95d1a48,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3585899609667047494, guid: 291eb0458b25bbe40bc80e0cc95d1a48,
         type: 3}

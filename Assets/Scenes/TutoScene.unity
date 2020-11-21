@@ -1605,6 +1605,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 124711308}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &972368334 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4567925200953923361, guid: 6c7baad5a9f2d074c88ae2449623f2c5,
+    type: 3}
+  m_PrefabInstance: {fileID: 2073962726}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1032543442
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2339,7 +2345,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tutoText: {fileID: 1510788825}
   tutoLoopObj: {fileID: 1560849534}
-  deathToDisplay: {fileID: 0}
+  deathToDisplay: {fileID: 972368334}
   tutoObject: {fileID: 2009801633}
   actualCheckpoint: {fileID: 0}
   deathCount: 0
@@ -2633,6 +2639,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4595770330240531592, guid: 6c7baad5a9f2d074c88ae2449623f2c5,
+        type: 3}
+      propertyPath: IsOnGround
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5867143057184853773, guid: 6c7baad5a9f2d074c88ae2449623f2c5,
         type: 3}
       propertyPath: m_LocalPosition.x

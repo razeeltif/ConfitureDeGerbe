@@ -20948,6 +20948,11 @@ PrefabInstance:
       propertyPath: speedToStrifeCoef
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 4595770330240531592, guid: 6c7baad5a9f2d074c88ae2449623f2c5,
+        type: 3}
+      propertyPath: IsOnGround
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4595770331920369757, guid: 6c7baad5a9f2d074c88ae2449623f2c5,
         type: 3}
       propertyPath: mainCamera

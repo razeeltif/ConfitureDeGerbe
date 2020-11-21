@@ -29,7 +29,7 @@ public class MoveUpdated : MonoBehaviour
     public float speedCoef = 0;
 
 
-    [HideInInspector]
+
     public bool IsOnGround = true;
 
     public GameObject front;

@@ -12,7 +12,7 @@ public class SkateHandle : Interactable
         if(isGrabbed){
             if(trackingSpace.transform.TransformVector(OVRInput.GetLocalControllerVelocity(grabbingHand)).y > 1.1)
             {
-                if(SkateManager.instance.alive)
+                if(SkateManager.instance.alive && !SkateManager.instance.endDetected)
                     GetComponentInParent<MoveUpdated>().CanMove = true;
             } 
         }
